@@ -13,7 +13,11 @@ This website application is designed to provide information about space. It pull
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-
+| Spec 1 | Input 1 | Output 1 |
+| Spec 2 | Input 2 | Output 2 |
+| Spec 3 | Input 3 | Output 3 |
+| Spec 4 | Input 4 | Output 4 |
+|  |  |  |
 
 
 
