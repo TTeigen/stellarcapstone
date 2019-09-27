@@ -32,7 +32,7 @@ This website application is designed to provide information about space. It pull
 * Navigate through the website through the links
 
 ## Known Bugs
-* No known bugs at this time.
+* This project is still a work in progress
 
 ## Technologies Used
 * React
