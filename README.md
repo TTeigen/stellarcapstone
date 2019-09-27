@@ -13,10 +13,13 @@ This website application is designed to provide information about space. It pull
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| Spec 1 | Input 1 | Output 1 |
-| Spec 2 | Input 2 | Output 2 |
-| Spec 3 | Input 3 | Output 3 |
-| Spec 4 | Input 4 | Output 4 |
+| Display general/random information on the home splash | fetch API on mount | Display various stories/info |
+| Display a selection of Planets | User navigates to 'planets' section | Display choices of planets to select |
+| Display info about a specific Planet | fetch API on click | Display information from API response |
+| Display a selection of Stars | User navigates to 'stars' section | Display choices of stars to select |
+| Display info about a specific Stars | fetch API on click | Display information from API response |
+| Display a selection of Space Exploration company | User navigates to 'exploration' section | Display choices of Space Exploration companies to select |
+| Display info about a specific Space Exploration company | fetch API on click | Display information from API response |
 |  |  |  |
 
 
@@ -35,6 +38,12 @@ This website application is designed to provide information about space. It pull
 * React
 * JS
 * Redux
+* r/SpaceX API
+* SpaceFlight API
+<!-- Might use AstroCast API -->
+<!-- Might use other NASA APIs, lots to sort through -->
+
+
 
 
 ## Proposal and charts
