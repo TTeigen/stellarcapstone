@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function Planet() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      {/* Need an image  information  */}
+    </div>
+  );
 }
 
-export default Planet
+export default Planet;

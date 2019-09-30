@@ -7,7 +7,7 @@ function Header() {
     background : 'lightblue',
     border : '1px solid black',
     padding : '5px',
-    listStyleType : "none",
+    listStyleType : 'none',
     display: 'inline',
     fontFamily: 'sans-serif',
     float : 'left',
@@ -15,7 +15,7 @@ function Header() {
   };
   var rightStyledHeader = {
     background : 'lightblue',
-    listStyleType : "none",
+    listStyleType : 'none',
     padding : '5px',
     display: 'inline',
     fontFamily: 'sans-serif',
@@ -25,15 +25,20 @@ function Header() {
   <style jsx global>{`
         .Header {
           background-color: grey
-      `}</style>
+      `}</style>;
   return (
     <div className = 'Header'>
-      <ul className = "nav-buttons">
+      <ul className = "nav-buttons" style = {{paddingLeft: 0}}>
         <li style = {leftStyledHeader}><Link to = "/">Home</Link></li>
+        <li style = {leftStyledHeader}><Link to = "/planets">Planets</Link></li>
+        <li style = {leftStyledHeader}><Link to = "/constellations">Constellations</Link></li>
+        <li style = {leftStyledHeader}><Link to = "/spacex">SpaceX,Etc.</Link></li>
       </ul>
       <ul className = "nav-search">
-        <li style = {rightStyledHeader}><Link to="/">CHANGE THIS ROUTE</Link></li>
-        <li style = {rightStyledHeader}></li>
+        <li style = {rightStyledHeader}><Link to="/results">Search</Link></li>
+        <li style = {rightStyledHeader}>
+          <input type = "text" placeholder = "Search..."/>
+        </li>
       </ul>
     </div>
   );

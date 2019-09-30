@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class ConstellationList extends Component {
-    render() {
-        return (
-            <div>
+  render() {
+    return (
+      <div>
                 
-            </div>
-        )
-    }
+      </div>
+    );
+  }
 }
-export default ConstellationList
+export default ConstellationList;

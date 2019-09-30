@@ -1,15 +1,15 @@
 //may or may not use this component
 
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class Nasa extends Component {
-    render() {
-        return (
-            <div>
+  render() {
+    return (
+      <div>
                 
-            </div>
-        )
-    }
+      </div>
+    );
+  }
 }
 
-export default Nasa
+export default Nasa;
