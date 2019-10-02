@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Header() {
@@ -12,7 +12,7 @@ function Header() {
     fontFamily: 'sans-serif',
     float : 'left',
     marginRight : '10px'
-  };
+  }
   var rightStyledHeader = {
     background : 'lightblue',
     listStyleType : 'none',
@@ -21,11 +21,8 @@ function Header() {
     fontFamily: 'sans-serif',
     float : 'right',
     marginRight : '10px'
-  };
-  <style jsx global>{`
-        .Header {
-          background-color: grey
-      `}</style>;
+  }
+
   return (
     <div className = 'Header'>
       <ul className = "nav-buttons" style = {{paddingLeft: 0}}>
@@ -41,7 +38,7 @@ function Header() {
         </li>
       </ul>
     </div>
-  );
+  )
 }
 
-export default Header;
+export default Header
