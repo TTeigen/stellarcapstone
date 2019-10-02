@@ -89,3 +89,13 @@ export default React.memo(component)
 passing the hook
 
 stuff hookFunction(() => props.callback)
+
+
+//info for display for planets (isPlanet === true)
+
+    aphelion={planet.aphelion}
+    perihelion={planet.perihelion}
+    gravity={planet.gravity}
+    mass={planet.mass}
+    radius={planet.meanRadius}
+    moons={planet.moons}
