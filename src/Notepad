@@ -93,9 +93,17 @@ stuff hookFunction(() => props.callback)
 
 //info for display for planets (isPlanet === true)
 
-    aphelion={planet.aphelion}
-    perihelion={planet.perihelion}
+    aphelion={planet.aphelion} /farthest
+    perihelion={planet.perihelion} /closest
     gravity={planet.gravity}
     mass={planet.mass}
     radius={planet.meanRadius}
-    moons={planet.moons}
+    moons={planet.moons} [objects]
+
+//info for moons (isPlanet===false)
+    name = moon.id
+    rel = moon.rel
+
+//code to filter to major bodies
+    const [isLoading, fetchedData] = useHttp(constants.ssodUrl, {})
+    const solarSystem = fetchedData ? fetchedData.bodies.filter(x => constants.listFilter.includes(x.englishName)) : []

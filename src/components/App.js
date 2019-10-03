@@ -1,20 +1,21 @@
-import React, { Component } from 'react'
-import Header from './Header'
+import React from 'react'
 import Home from './Home'
-import Planet from './planets/Planet'
-import PlanetList from './planets/PlanetList'
+import PlanetDisplay from './planets/PlanetDisplay'
+import { Route, Switch } from 'react-router-dom'
 
 
-class App extends Component {
-  //code for styling a header image 
-  render() {
-    return (
-      <div style={{ background: '#ADBCE6' }}>
-        <Header />
-        <PlanetList />
-      </div>
-    )
-  }
+function App() {
+
+  return (
+    <div>
+      <Switch>
+        <Route
+          exact path="/" render={() => <Home />}
+        />
+        <Route exact path='/planets' render={() => <PlanetDisplay />} />
+      </Switch>
+    </div>
+  )
 }
 
 export default App

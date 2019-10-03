@@ -6,30 +6,21 @@ import {v4} from 'uuid'
 
 const PlanetList = props => {
 
-    const listFilter = [
-        "Sun",
-        "Mercury",
-        "Venus",
-        "Earth",
-        "Mars",
-        "Jupiter",
-        "Saturn",
-        "Uranus",
-        "Neptune",
-        "Pluto"
-    ]
 
-    const [isLoading, fetchedData] = useHttp(constants.ssodUrl, {})
-    const solarSystem = fetchedData ? fetchedData.bodies.filter(x => listFilter.includes(x.englishName)) : []
+
     console.log('solarSystem', solarSystem)
-
+    console.log('listFilter', listFilter)
     let content = "Creating solar system..."
 
     
 
     if (!isLoading && solarSystem && solarSystem.length > 0) {
         content = (
-            <div style={{ float: 'left' }}>
+            <div style={{
+                float: 'left', 
+                marginTop: 30,
+                columns: '3 25px',
+                }}>
                 {solarSystem.map(x =>
                     <Planet
                         id={x.id}

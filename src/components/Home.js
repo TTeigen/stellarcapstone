@@ -3,10 +3,9 @@ import * as Constants from './constants'
 
 function Home() {
 
-  // componentDidMount() { 
-  // }
+
   const containerGrid = {
-    display: 'grid'
+    display: 'flex'
   }
 
   const parallaxStyle = {
