@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Radium from 'radium'
 import Planet from './Planet'
 import Moon from './Moon'
-import PlanetList from './PlanetList'
+
 
 
 const PlanetDisplay = props => {
 
-    console.log('props.loading', props.loading)
+    const [selectedPlanet, setPlanet] = useState({})
     console.log('props.solarSystem', props.solarSystem)
+    console.log('selectedPlanet', selectedPlanet)
     //styles for planet selector
     var selectorStyles = {
         container: {
@@ -57,15 +58,18 @@ const PlanetDisplay = props => {
             width: '150px',
             height: '150px',
             margin: '5vh 5vw 5vh 5vw',
+        },
+        text: {
+            marginTop: '5vh'
         }
     }
 
     return (
         <div className="page-container" >
             <div className='selector-container' style={selectorStyles.container}>
-                <div className="sun" style={{ textAlign: 'center' }}><img src="https://tinyurl.com/yy99zvyx" style={selectorStyles.sunImage} /></div>
+                <div className="sun" style={{ textAlign: 'center' }}><img src="https://tinyurl.com/yy99zvyx" style={selectorStyles.sunImage} onClick={() => { setPlanet(props.solarSystem.find(x => x.englishName == "Sun")) }} /></div>
                 <div style={selectorStyles.planetGrid}>
-                    <img src="https://tinyurl.com/yy99zvyx" style={selectorStyles.planetImage}/>
+                    <img src="https://tinyurl.com/yy99zvyx" style={selectorStyles.planetImage} />
                     <img src="https://tinyurl.com/yy99zvyx" style={selectorStyles.planetImage} />
                     <img src="https://tinyurl.com/yy99zvyx" style={selectorStyles.planetImage} />
                     <img src="https://tinyurl.com/yy99zvyx" style={selectorStyles.planetImage} />
@@ -77,14 +81,16 @@ const PlanetDisplay = props => {
                 </div>
             </div>
             <div className='info-container' style={infoStyles.container}>
-                <img
-                    src="https://tinyurl.com/yy99zvyx" style={infoStyles.image}
-                />
-                <div>
-                    <h1>{props.solarSystem[0].englishName}</h1>
-                </div>
-                <div className="moons">
-                    <Moon />
+                <div className='planetInfo'>
+                    {selectedPlanet != null ? (
+                        selectedPlanet.map(x => {
+                            <Planet
+
+
+                            />
+                        })
+                    )
+                        : (<h1>Galaxy Placeholder</h1>)}
                 </div>
             </div>
         </div >
