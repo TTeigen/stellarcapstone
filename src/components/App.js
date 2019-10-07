@@ -3,7 +3,7 @@ import Home from './Home'
 import {useHttp}from './../hooks/http'
 import PlanetDisplay from './planets/PlanetDisplay'
 import { Route, Switch } from 'react-router-dom'
-import constants from './constants';
+import constants from './constants'
 
 
 function App() {

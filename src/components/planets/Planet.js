@@ -1,6 +1,6 @@
 import React from 'react'
 import constants from './../constants'
-import {fadeIn} from 'react-animations'
+
 
 const Planet = props => {
     console.log('Planetprops', props)
@@ -13,8 +13,8 @@ const Planet = props => {
         props.name != "Sun" ? (
             //if planet
             <div>
+                 
                 <h1>{props.name}</h1>
-                <img src={constants.planetImages[props.name]}/>
                 <ul style={{ listStyle: 'none' }}>
                     <li><strong>Gravity(in m/s<sup>2</sup>)</strong>: {props.gravity} </li>
                     <li><strong>Mass(10<sup>24</sup>kg)</strong>: {(props.mass.massValue).toFixed(2)}</li>
@@ -22,7 +22,7 @@ const Planet = props => {
                     <li><strong>Aphelion (point of orbit farthest from the sun)</strong>:{props.aphelion}</li>
                     <li><strong>Perihelion (point of orbit closest to the sun)</strong>:{props.perihelion}</li>
                 </ul>
-                <h4>Moons</h4>
+                <h4>Moons (in french because API)</h4>
                 {props.moons.length > 0 ? (
                     <div style = {{
                         display: 'grid',

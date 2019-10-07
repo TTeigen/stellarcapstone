@@ -32,8 +32,7 @@ function Header() {
     <div className = 'Header' style = {headerStyles}>
       <ul className = "nav-buttons" style = {{paddingLeft: 0}}>
         <li style = {leftStyledHeader}><Link to = "/">Home</Link></li>
-        <li style = {leftStyledHeader}><Link to = "/planets">Planets</Link></li>
-        <li style = {leftStyledHeader}><Link to = "/constellations">Constellations</Link></li>
+        <li style = {leftStyledHeader}><Link to = "/planets">Our Solar System</Link></li>
         <li style = {leftStyledHeader}><Link to = "/spacex">SpaceX,Etc.</Link></li>
       </ul>
       <ul className = "nav-search">
