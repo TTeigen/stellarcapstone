@@ -107,3 +107,5 @@ stuff hookFunction(() => props.callback)
 //code to filter to major bodies
     const [isLoading, fetchedData] = useHttp(constants.ssodUrl, {})
     const solarSystem = fetchedData ? fetchedData.bodies.filter(x => constants.listFilter.includes(x.englishName)) : []
+
+    (1024kg)
