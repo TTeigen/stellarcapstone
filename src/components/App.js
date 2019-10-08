@@ -7,6 +7,7 @@ import PlanetDisplay from './planets/PlanetDisplay'
 import { Route, Switch } from 'react-router-dom'
 import constants from './constants'
 import Search from './Search'
+import SpaceX from './../components/exploration/spaceX/SpaceX'
 
 
 
@@ -33,6 +34,7 @@ const App = props => {
         />
         <Route exact path='/planets' render={() => <PlanetDisplay solarSystem={fetchedData ? fetchedData.bodies.filter(x => constants.listFilter.includes(x.englishName)) : []} />} />
         <Route exact path='/search' render={() => <Search />} />
+        <Route exact path= '/spaceX' render = {() => <SpaceX />} />
       </Switch>
     </div>
   )

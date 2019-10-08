@@ -15,7 +15,8 @@ const Home = props => {
   console.log('latest', latest)
 
   const setupStyles = {
-    color: 'white'
+    color: 'white',
+    fontFamily: 'ocr a std, monospace'
   }
 
   const imageStyles = {
@@ -35,9 +36,11 @@ const Home = props => {
     },
     text: {
       position: 'absolute',
-      bottom: '22vh',
+      bottom: '18vh',
       left: '4vw',
-      width: '65vw'
+      width: '65vw',
+      background: 'rgba(0,0,0,.2)',
+      padding: '1vh'
     },
     picTitle: {
       position: 'absolute',
@@ -54,26 +57,27 @@ const Home = props => {
     marginLeft: '2vw',
     border: '2px outset #4a4e7d',
     float: 'left',
+    background: 'rgba(158,150,163, .2)'
   }
 
   return (
     <div className='home-container' style={setupStyles}>
-      <h1 style={{ textAlign: 'center' }}>The Final Frontier</h1>
+      <h1 style={{ textAlign: 'center', }}>The Final Frontier</h1>
       <div style={imageStyles.container}>
         <img src={pictureOfDay} style={imageStyles.image} />
         <h2 style = {imageStyles.picTitle}>NASA Picture of the Day - {title}</h2>
         <p style={imageStyles.text}>{explanation}</p>
       </div>
       <div style={newsStyle}>
-        <h3 style = {{textAlign: 'center'}}>Latest SpaceX Launch</h3>
+        <h3 style = {{textAlign: 'center', textDecoration: 'underline'}}>Latest SpaceX Launch</h3>
         <li style = {{listStyle: 'none', marginLeft: '1vw'}}>{latest.mission_name}</li>  
         <br />    
-        <h3 style = {{textAlign: 'center'}}>Upcoming SpaceX Launches</h3>
+        <h3 style = {{textAlign: 'center', textDecoration: 'underline'}}>Upcoming SpaceX Launches</h3>
         {upcoming ? (upcoming.map((launch) =>
           <li style = {{listStyle: 'none', marginLeft: '1vw'}}>{launch.mission_name}</li>        
         )) :''}
         <br />
-        <h3 style = {{textAlign: 'center'}}>Past SpaceX Launches</h3>
+        <h3 style = {{textAlign: 'center', textDecoration: 'underline'}}>Past SpaceX Launches</h3>
         {past ? (past.map((launch) =>
           <li style = {{listStyle: 'none', marginLeft: '1vw'}}>{launch.mission_name}</li>        
         )) :''}
