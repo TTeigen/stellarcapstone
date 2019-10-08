@@ -40,7 +40,7 @@ function Header() {
         fontFamily: 'ocr a std, monospace'
       }}>
         Stellar Capstone
-    </h1>
+      </h1>
       <div className='Header' style={headerStyles}>
         <ul className="nav-buttons" style={{ paddingLeft: 0 }}>
           <li style={leftStyledHeader}><Link to="/">Home</Link></li>

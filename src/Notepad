@@ -105,7 +105,9 @@ stuff hookFunction(() => props.callback)
     rel = moon.rel
 
 //code to filter to major bodies
-    const [isLoading, fetchedData] = useHttp(constants.ssodUrl, {})
+    const [isLoading, fetchedData] = useSolarSystem(constants.ssodUrl, {})
     const solarSystem = fetchedData ? fetchedData.bodies.filter(x => constants.listFilter.includes(x.englishName)) : []
 
-    (1024kg)
+
+HomePage & SpaceX News
+    potentially SpaceX Page
