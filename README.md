@@ -39,9 +39,8 @@ This website application is designed to provide information about space. It pull
 * JS
 * Redux
 * r/SpaceX API
-* SpaceFlight API
-<!-- Might use AstroCast API -->
-<!-- Might use other NASA APIs, lots to sort through -->
+* NASA APOD API
+* SolarSystem OpenSource API
 
 
 
@@ -50,7 +49,7 @@ This website application is designed to provide information about space. It pull
 
 Name of Student: Trevor Teigen
 
-Name of Project: TBD (Either EscapeRoom game or an App about space things)
+Name of Project: Stellar Capstone
 
 Project’s Purpose or Goal: Entertainment/Education
 
@@ -63,7 +62,9 @@ What tools, frameworks, libraries, APIs, modules and/or other resources (whateve
 
 React/Redux
 JS
-Probably an API
+SpaceX API
+NASA APOD API
+Solar System OpenSource API
 
 If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next?
 ability to copy images as backgrounds
