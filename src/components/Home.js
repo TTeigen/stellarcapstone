@@ -1,24 +1,30 @@
 import React from 'react'
-import * as Constants from './constants'
 
 const Home = props => {
 
-  console.log('Homeprops', props)
-
+  //shuffle
+  var shuffle = require('shuffle-array')
+  //NASA API 
   let pictureOfDay = props.picture != null ? props.picture.url : ''
   let explanation = props.picture != null ? props.picture.explanation : ''
   let title = props.picture != null ? props.picture.title : ''
-  let upcoming = props.news.upcoming != null ? props.news.upcoming.slice(0,10) : ''
-  let past = props.news.past != null ? props.news.past.slice(0,10) : ''
+
+  //SpaceX API
+  let upcoming = props.news.upcoming != null ? props.news.upcoming.slice(0,9) : ''
+  let past = props.news.past != null ? shuffle(props.news.past).slice(0,9) : ''
   let latest = props.news.latest != null ? props.news.latest : ''
+  let latestLink = props.news.latest != null ? props.news.latest.links.article_link : ''
 
-  console.log('latest', latest)
+  console.log('props.news.past', props.news.past)
+  console.log('past', past)
 
-  const setupStyles = {
+
+  //page styling
+  const containerStyles = {
     color: 'white',
     fontFamily: 'ocr a std, monospace'
   }
-
+  //APOD styling
   const imageStyles = {
     container: {
       background: 'black',
@@ -50,18 +56,18 @@ const Home = props => {
       backgroundColor: 'none'
     }
   }
-
+  //Launch Links Styling
   const newsStyle = {
     width: '20vw',
     height: '60vh',
     marginLeft: '2vw',
     border: '2px outset #4a4e7d',
     float: 'left',
-    background: 'rgba(158,150,163, .2)'
+    background: 'rgba(0,0,0, .8)'
   }
 
   return (
-    <div className='home-container' style={setupStyles}>
+    <div className='home-container' style={containerStyles}>
       <h1 style={{ textAlign: 'center', }}>The Final Frontier</h1>
       <div style={imageStyles.container}>
         <img src={pictureOfDay} style={imageStyles.image} />
@@ -69,8 +75,8 @@ const Home = props => {
         <p style={imageStyles.text}>{explanation}</p>
       </div>
       <div style={newsStyle}>
-        <h3 style = {{textAlign: 'center', textDecoration: 'underline'}}>Latest SpaceX Launch</h3>
-        <li style = {{listStyle: 'none', marginLeft: '1vw'}}>{latest.mission_name}</li>  
+        <h3 style = {{textAlign: 'center', textDecoration: 'underline'}}>Most Recent SpaceX Launch</h3>
+        <li style = {{listStyle: 'none', marginLeft: '1vw'}}><a href= {latestLink}>{latest.mission_name}</a></li>  
         <br />    
         <h3 style = {{textAlign: 'center', textDecoration: 'underline'}}>Upcoming SpaceX Launches</h3>
         {upcoming ? (upcoming.map((launch) =>
@@ -79,7 +85,7 @@ const Home = props => {
         <br />
         <h3 style = {{textAlign: 'center', textDecoration: 'underline'}}>Past SpaceX Launches</h3>
         {past ? (past.map((launch) =>
-          <li style = {{listStyle: 'none', marginLeft: '1vw'}}>{launch.mission_name}</li>        
+          <li style = {{listStyle: 'none', marginLeft: '1vw'}}><a href= {launch.links.article_link}>{launch.mission_name}</a></li>        
         )) :''}
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import Planet from './Planet'
 import constants from './../constants'
 import { v4 } from 'uuid'
@@ -11,7 +11,7 @@ import { v4 } from 'uuid'
 const PlanetDisplay = props => {
 
   const [selectedPlanet, setPlanet] = useState({})
-  let infoBG = selectedPlanet != null ? constants.planetGIF[selectedPlanet.englishName] : constants.planetGIF['galaxy']
+  let infoBG = selectedPlanet != null ? constants.planetGIF[selectedPlanet.englishName] : 'https://tinyurl.com/y4ntp7wd'
 
   //styles for planet selector
   var selectorStyles = {
@@ -121,5 +121,6 @@ const PlanetDisplay = props => {
     </div >
   )
 }
+
 
 export default Radium(PlanetDisplay)
