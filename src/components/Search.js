@@ -1,5 +1,7 @@
 import React from 'react'
 
+//intend to use NASA API to show search results
+
 const Search = props => {
   var gameOver = {
     color: 'white',

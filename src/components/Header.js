@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 function Header() {
-
+//overall sytle
   var headerStyles = {
     padding: '5px',
     backgroundImage: 'url(https://tinyurl.com/yxexsmjz)',
@@ -12,6 +12,7 @@ function Header() {
     backgroundSize: 'cover',
     border: '4px ridge #4a4e7d'
   }
+//style for lefthand nav-buttons
   var leftStyledHeader = {
     background: '#9e96a3',
     border: '1px ridge black',
@@ -22,6 +23,7 @@ function Header() {
     float: 'left',
     marginRight: '10px'
   }
+//style for righthand search input
   var rightStyledHeader = {
     background: '#9e96a3',
     listStyleType: 'none',

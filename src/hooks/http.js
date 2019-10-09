@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 
-export const useSolarSystem = (url, dependencies) => {
+//custom hook re-used for API calls
+
+export const useHttp = (url, dependencies) => {
   const [isLoading, setLoading] = useState(false)
   const [fetchedData, setFetchedData] = useState(null)
   useEffect(() => {

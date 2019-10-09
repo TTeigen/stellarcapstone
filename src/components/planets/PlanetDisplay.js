@@ -73,29 +73,31 @@ const PlanetDisplay = props => {
 
   return (
     <div className="page-container" >
+    {/* Left-side Grid to select Planets */}
       <div className='selector-container' style={selectorStyles.container}>
-        <div className="sun" style={{ textAlign: 'center' }}><img src='https://tinyurl.com/y43py52t' style={selectorStyles.sunImage} onClick={() => { setPlanet(props.solarSystem.find(x => x.englishName == 'Sun')) }} /></div>
+        <div className="sun" style={{ textAlign: 'center' }}><img src='https://tinyurl.com/y43py52t' style={selectorStyles.sunImage} onClick={() => { setPlanet(props.solarSystem.bodies.find(x => x.englishName == 'Sun')) }} /></div>
         <div style={selectorStyles.planetGrid}>
 
-          <img src="https://tinyurl.com/y4w6f7en" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.find(x => x.englishName == 'Mercury')) }} />
+          <img src="https://tinyurl.com/y4w6f7en" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.bodies.find(x => x.englishName == 'Mercury')) }} />
 
-          <img src="https://tinyurl.com/y3c6hqcp" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.find(x => x.englishName == 'Venus')) }} />
+          <img src="https://tinyurl.com/y3c6hqcp" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.bodies.find(x => x.englishName == "Venus")) }} />
 
-          <img src="https://tinyurl.com/y5wz9yme" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.find(x => x.englishName == 'Earth')) }} />
+          <img src="https://tinyurl.com/y5wz9yme" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.bodies.find(x => x.englishName == 'Earth')) }} />
 
-          <img src="https://tinyurl.com/yy5zgpgk" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.find(x => x.englishName == 'Mars')) }} />
+          <img src="https://tinyurl.com/yy5zgpgk" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.bodies.find(x => x.englishName == 'Mars')) }} />
 
-          <img src="https://tinyurl.com/y2yryb4n" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.find(x => x.englishName == 'Jupiter')) }} />
+          <img src="https://tinyurl.com/y2yryb4n" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.bodies.find(x => x.englishName == 'Jupiter')) }} />
 
-          <img src="https://tinyurl.com/y28gl9kp" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.find(x => x.englishName == 'Saturn')) }} />
+          <img src="https://tinyurl.com/y28gl9kp" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.bodies.find(x => x.englishName == 'Saturn')) }} />
 
-          <img src="https://tinyurl.com/y63gmred" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.find(x => x.englishName == 'Uranus')) }} />
+          <img src="https://tinyurl.com/y63gmred" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.bodies.find(x => x.englishName == 'Uranus')) }} />
 
-          <img src="https://tinyurl.com/y3q4py9y" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.find(x => x.englishName == 'Neptune')) }} />
+          <img src="https://tinyurl.com/y3q4py9y" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.bodies.find(x => x.englishName == 'Neptune')) }} />
 
-          <img src="https://tinyurl.com/y57792u9" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.find(x => x.englishName == 'Pluto')) }} />
+          <img src="https://tinyurl.com/y57792u9" style={selectorStyles.planetImage} onClick={() => { setPlanet(props.solarSystem.bodies.find(x => x.englishName == 'Pluto')) }} />
         </div>
       </div>
+      {/* Right-side box to display information about currently selected Planet (resets when you leave page) */}
       <div className='info-container' style={infoStyles.container}>
         <div className='planetInfo' style={infoStyles.text}>
           {selectedPlanet.englishName != undefined ? (
@@ -119,6 +121,8 @@ const PlanetDisplay = props => {
         </div>
       </div>
     </div >
+
+
   )
 }
 

@@ -1,18 +1,13 @@
-
 export default {
   //API URLS
-
   // solar system openData
-  ssodUrl: 'https://cors-anywhere.herokuapp.com/https://api.le-systeme-solaire.net/rest.php/bodies/',
-
-  //NASA Pictur of the Day
+  ssodUrl: 'https://api.le-systeme-solaire.net/rest.php/bodies',
+  //NASA Picture of the Day
   podUrl: 'https://api.nasa.gov/planetary/apod?api_key=O5QOmAwQTzj3YbIlmcSg3lRnccfkdR0Y4XeQxIA9',
-
   //SpaceX Url
-  spaceXUpcoming: 'https://api.spacexdata.com/v3/launches/upcoming',
-  spaceXLatest: 'https://api.spacexdata.com/v3/launches/latest',
-  spaceXPast: 'https://api.spacexdata.com/v3/launches/past',
-
+  spaceXUpcoming: 'https://api.spacexdata.com/v3/launches/upcoming?filter=mission_name',
+  spaceXLatest: 'https://api.spacexdata.com/v3/launches/latest?filter=mission_name',
+  spaceXPast: 'https://api.spacexdata.com/v3/launches/past?filter=mission_name,links/article_link',
   //planet info/gifs
   planetGIF: {
     galaxy: 'https://tinyurl.com/y4ntp7wd',
@@ -41,4 +36,14 @@ export default {
   ]
 }
 
-// 
+
+
+
+
+
+
+
+
+
+
+

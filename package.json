@@ -16,6 +16,7 @@
     "radium": "^0.26.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
+    "react-iframe": "^1.8.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^5.1.2",
     "react-scripts": "2.1.5",

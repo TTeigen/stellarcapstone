@@ -40,7 +40,7 @@ This website application is designed to provide information about space. It pull
 * Redux
 * r/SpaceX API
 * NASA APOD API
-* SolarSystem OpenSource API
+* SolarSystem OpenData API
 
 
 
